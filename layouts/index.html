@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="" lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8" />
+
+    {{ partial "meta.html" . }}
+
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+{{ $sitetitle := .Site.Title }}
+{{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $sitetitle }}" />
+{{ end }}
+    {{ partial "head_includes.html" . }}
+  </head>
+  <body lang="{{ .Site.LanguageCode }}" class="helvetica w-90 w-60-ns center center-ns mv2 mv5-ns">
+    <section id="main">
+      <div>
+        <h1 id="title" class="f1">
+          {{ .Site.Title }}
+        </h1>
+        <h3 class="f3">I'm a software and systems engineer from Seattle, WA.</h3>
+        <p>I have a passion for software development, system design and automation, and to never stop learning. I take pride in my work, and I strive to create the best possible solution that has lasting value.</p>
+        <p>Checkout my résumé for more details about my skillset, or look me up on Github or LinkedIn.</p>
+        <p><a href="https://github.com/Grant1219">https://github.com/Grant1219</a></p>
+        <p><a href="https://www.linkedin.com/in/grant-gangi/">https://www.linkedin.com/in/grant-gangi/</a></p>
+        <ul class="list pl0">
+          {{ range .Site.Params.menu }}
+          <li class="b mv3">
+            <a class="f3 b pa1 black" href="{{ .url }}">{{ .name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </section>
+
+  {{ partial "footer.html" . }}
+  </body>
+</html>

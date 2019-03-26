@@ -1,0 +1,39 @@
+baseurl = "https://grant.tuxinator.net"
+title = "Grant Gangi"
+languageCode = "en-us"
+enableEmoji = true
+description = "Grant's personal website/blog"
+copyright = "&copy; Grant Gangi"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[params]
+  twitter = "Tuxinator520"
+
+[Permalinks]
+  post = "post/:slug"
+
+[[params.menu]]
+  name = "posts"
+  url = "post/"
+
+[[params.menu]]
+  name = "post series"
+  url = "series/"
+
+[[params.menu]]
+  name = "about"
+  url = "about/"
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
