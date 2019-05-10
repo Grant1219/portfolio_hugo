@@ -1,0 +1,85 @@
+Grant Gangi
+Phone: (585) 698-4585
+Email: grant@tuxinator.net
+Location: Seattle, WA
+
+
+Professional Experience
+-----------------------
+
+Moz (2018 - Present)
+
+DevOps Engineer
+
+    - Design, provision, and maintain container platforms with Mesosphere and Kubernetes to make application development and
+      deployment faster, more reliable, consistent between environments, and ultimately allowing for quicker iteration of features
+    - Develop tools and automation to help standardize processes across teams
+    - Communicate to teams about services and tools offered that can improve their development processes,
+      and work directly with teams to implement them as needed
+    - Plan and implement service discovery and other network improvements to make migrations into AWS more seamless
+      and improve reliability in a cloud environment
+
+Rackspace (2016 - 2018)
+
+Linux Systems Engineer
+
+    - Maintain and develop Python software for a high-availability distributed event processing system which gathers information from
+      all parts of the infrastructure and performs actions as necessary to keep the systems healthy and prevent abuse.
+    - Support and administer high-throughput email platform spread across multiple availability zones containing thousands of servers
+      while adhering to the 100% uptime guarantee for millions of customers traffic
+    - Implemented a message classification system, helping customers better understand their email and reducing customer contacts
+      for spam and virus related issues
+    - Improved the infrastructure monitoring to eliminate spurious alerts and free up on-call staff to work on more valuable projects.
+    - Provision and manage pre-production environments and Jenkins instances to facilitate unit and integration testing and give teams
+      more confidence in their deployments
+    - Conducted a side-by-side comparison of two email content filtering technologies using production traffic without causing any
+      impact on user experience. The data gathered resulted in switching technologies and saving over $400,000 a year in licensing costs.
+
+Simon School of Business at University of Rochester (2010 - 2016)
+
+Senior Developer and Systems Administrator: Simon School of Business
+
+    - Led development of a web based real-time multi-player business simulation software used by top business schools around the world
+    - Engineered management software for organization and viewing of real-time business simulation data for research and teaching purposes
+    - Designed and deployed architecture for migrating all student service, admissions, and records applications
+    - Used Python microservices to streamline legacy monolithic web applications supporting student and faculty operations
+    - Developed and deployed a school-wide print release system which reduced paper waste and increased student satisfaction
+    - Planned and led deployment of backups, monitoring, and documentation for IT infrastructure
+    - Improved classroom experience by developing a classroom A/V controller allowing hardware annotation on any input source using a touchscreen monitor
+
+Analyst Programmer: Simon School of Business
+
+    - Setup and managed virtual server environments for testing and software development
+    - Saved substantial time and resources while converting a C++/C# brain aneurysm risk calculator to a web application by avoiding a rewrite
+    - Designed and implemented a web based university-wide event calendar with Facebook integration for easy access to events happening around the university
+    - Developed a data trawler which tracks alumni on social networks, and consolidates their information into a database to help new graduates find connections
+
+
+Personal Projects
+-----------------
+
+    - Home automation system for controlling lights and HVAC remotely using AVR microcontrollers and MQTT for communication
+    - Distributed multi-threaded job dispatching server using C++, along with Lua for scripting
+    - Networked collision detection between neighboring objects using a quadtree within Redis
+    - Particle system editor for creating special effects within video games (fire, rain, explosions)
+    - Online RPG currently in development using C++ and Lua
+
+
+Technical Expertise
+-------------------
+
+    Languages: Python, C, C++, Go, Bash, PHP, Java, C#, JS
+    Operating Systems: Debian Linux, RHEL/CentOS, Gentoo Linux
+    Container Platforms: Mesos, Kubernetes
+    Web/Email Services: Nginx, Haproxy, Envoyproxy, Apache, Postfix, Dovecot
+    Event/Data Processing Services: RabbitMQ, Flume, Kafka, Elasticsearch, Logstash
+    Databases: MySQL, Redis, Cassandra, MongoDB, Memcached, Graphite, InfluxDB
+    Tools and Automation: Git, CMake, Jenkins, Chef, Ansible, Vagrant, Docker
+
+
+Education
+---------
+
+    Associates of Science, Computer Information Systems
+    Monroe Community College, Rochester, NY
+    September 2009 - June 2012

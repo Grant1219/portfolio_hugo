@@ -1,40 +1,39 @@
 {{ partial "header.html" . }}
 
-<section id="main">
-  <div>
-    <h1 id="title" class="f-subheadline normal">
-      {{ .Site.Title }}
-    </h1>
-    <h3 class="f2 normal">I'm a Linux focused software and systems engineer.</h3>
-    <p>I have a passion for software development, system design and automation, and to never stop learning. I take pride in my work, and I strive to create the best possible solution that has lasting value.</p>
-    <p>Checkout my résumé for more details about my skillset, or look me up on Github or LinkedIn.</p>
-    <p><a href="{{ .Site.BaseURL }}/downloads/resume.pdf">Resume PDF</a></p>
-    <p><a href="https://github.com/Grant1219">https://github.com/Grant1219</a></p>
-    <p><a href="https://www.linkedin.com/in/grant-gangi/">https://www.linkedin.com/in/grant-gangi/</a></p>
-    <!--
-    <ul class="list pl0">
-      {{ range .Site.Params.menu }}
-      <li class="b mv3">
-        <a class="f3 b pa1 black" href="{{ .url }}">{{ .name }}</a>
-      </li>
-      {{ end }}
-    </ul>
-    -->
-    <h2 class="f2 normal">Latest Posts</h2>
-    <ul id="list" class="pl0">
-      {{ $latest_posts := first 3 (where site.RegularPages.ByDate.Reverse "Type" "post") }}
-      {{ if gt (len $latest_posts) 0 }}
-      {{ range $latest_posts }}
-      <li class="list pl0 lh-copy">
-        <a class="f3 b dib black no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
-        <span class="f6 gray db dib-ns">{{ .Date.Format "January 2, 2006" }}</span>
-      </li>
-      {{ end }}
-      {{ else }}
-      <p>No posts to display.</p>
-      {{ end }}
-    </ul>
+<main>
+  <h1 id="title" class="f-subheadline normal">
+    {{ .Site.Title }}
+  </h1>
+  <h2 class="f2 normal">I'm a Linux focused software and systems engineer.</h2>
+  <p>I have a passion for software development, system design and automation, and to never stop learning. I take pride in my work, and I strive to create the best possible solution that has lasting value.</p>
+  <p>Checkout my resume for more details about my skillset, or look me up on <a href="https://github.com/Grant1219">Github</a> or <a href="https://www.linkedin.com/in/grant-gangi/">LinkedIn</a>.</p>
+  <h4 class="f3">Resume</h4>
+  <div class="cf">
+    <figure class="fl">
+      <a href="/downloads/resume.pdf">
+        <img src="/images/pdf-icon.png" alt="PDF Resume" class="mw3">
+      </a>
+    </figure>
+    <figure class="fl">
+      <a href="/downloads/resume.txt">
+        <img src="/images/txt-icon.png" alt="TXT Resume" class="mw3">
+      </a>
+    </figure>
   </div>
-</section>
+  <h2 class="f2 normal">Latest Posts</h2>
+  <ul id="list" class="pl0">
+    {{ $latest_posts := first 3 (where site.RegularPages.ByDate.Reverse "Type" "post") }}
+    {{ if gt (len $latest_posts) 0 }}
+    {{ range $latest_posts }}
+    <li class="list pl0 lh-copy">
+      <a class="f3 b dib black no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
+      <span class="f6 gray db dib-ns">{{ .Date.Format "January 2, 2006" }}</span>
+    </li>
+    {{ end }}
+    {{ else }}
+    <p>No posts to display.</p>
+    {{ end }}
+  </ul>
+</main>
 
 {{ partial "footer.html" . }}
