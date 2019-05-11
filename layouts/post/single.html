@@ -1,10 +1,16 @@
 {{ partial "header.html" . }}
 
-<header>
-  <span class="f3 b">/ </span>
-  <a href="{{ .Site.BaseURL  }}" class="f3 b bb bw1 pb1 no-underline black">{{ .Site.Title }}</a>
-  <span class="f3 b"> / </span>
-  <a href="/post" class="f3 b bb bw1 pb1 no-underline black">posts</a>
+<header class="cf w-100">
+  <div class="fl w-60 pv4">
+    <span class="f3 b">/ </span>
+    <a href="{{ .Site.BaseURL  }}" class="f3 b bb bw1 pb1 no-underline black">{{ .Site.Title }}</a>
+    <span class="f3 b"> / </span>
+    <a href="/post" class="f3 b bb bw1 pb1 no-underline black">posts</a>
+  </div>
+  <div class="fl w-40 pv4 tr">
+    <a href="/post" class="f3 b bb bw1 pb1 no-underline black mr3">all posts</a>
+    <a href="/about" class="f3 b bb bw1 pb1 no-underline black mr6">about</a>
+  </div>
 </header>
 
 <main class="mt5">
