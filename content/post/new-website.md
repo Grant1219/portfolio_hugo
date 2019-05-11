@@ -18,9 +18,16 @@ isi probably reading, so keeping it clean and readable should be the top priorit
 
 Despite the timesink, I did learn about a few new tools on the way.
 
+First I'd like to mention that the CSS and JS libraries used on this site were from looking at
+[hugo-theme-basic](https://github.com/siegerts/hugo-theme-basic) made by Stephen Siegert,
+so thanks for making that theme.
+
 [Tachyons](http://tachyons.io/) is a really neat CSS framework. It's one file,
 and the styles are all short names that can quickly be applied to the "class"
-attribute of any HTML element.
+attribute of any HTML element. I was originally deciding between writing my own CSS and
+using Bootstrap (which is overkill for such a simple website), but I think Tachyons is
+a good middle ground when you want to save time but don't need all the extras that come
+with a larger CSS framework.
 
 I have used [Hugo](https://gohugo.io/) before, and this is the second website I've
 created with it. I would still strongly recommend it to anyone looking to make a
