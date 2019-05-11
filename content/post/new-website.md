@@ -5,7 +5,6 @@ tags = ["personal"]
 categories = ["Personal"]
 # series = []
 date = 2019-05-10T09:59:40-07:00
-draft = true
 +++
 
 This website has taken much longer to get online than it should have.
