@@ -28,32 +28,34 @@
     </span>
 
     {{ if and (.Site.Taxonomies.series) (isset .Params "series") }}
-      <section class="mt4">
-        {{ $readMore := ":wave:" }}
-        {{ $series := .Params.series | urlize}}
-        <h3>{{ $readMore | emojify }} Related posts in the <a href="/series/{{ $series }}" class="b bb bw1 pb1 no-underline black">{{ .Params.Series }}</a> series...</h3>
+    <section class="mt4">
+      {{ $readMore := ":wave:" }}
+      {{ $series := .Params.series | urlize}}
+      <h3>{{ $readMore | emojify }} Related posts in the <a href="/series/{{ $series }}" class="b bb bw1 pb1 no-underline black">{{ .Params.Series }}</a> series...</h3>
 
-        {{ $posts := index .Site.Taxonomies.series $series }}
+      {{ $posts := index .Site.Taxonomies.series $series }}
 
-        {{ if (gt ($posts | len) 1)}}
-          <ul class="list pl0">
-            {{ range where $posts "Title" "!=" .Title }}
-              <li class="list pl0 lh-copy">
-                <a class="f4 b dib black no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
-                <span class="f6 gray">{{ .Date.Format "January 2, 2006" }}</span>
-              </li>
-            {{ end }}
-          </ul>
-        {{ else }}
-          <div class="ph2 i">
-            No follow up posts yet. Check back soon!
-          </div>
-        {{ end }}
-      </section>
+      {{ if (gt ($posts | len) 1)}}
+        <ul class="list pl0">
+          {{ range where $posts "Title" "!=" .Title }}
+            <li class="list pl0 lh-copy">
+              <a class="f4 b dib black no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
+              <span class="f6 gray">{{ .Date.Format "January 2, 2006" }}</span>
+            </li>
+          {{ end }}
+        </ul>
+      {{ else }}
+        <div class="ph2 i">
+          No follow up posts yet. Check back soon!
+        </div>
+      {{ end }}
+    </section>
     {{ end }}
 
-    <h3 class="f3">Comments</h3>
-    {{ template "_internal/disqus.html" . }}
+    <section class="w-90 mt5">
+      <h3 class="f3">Comments</h3>
+      {{ template "_internal/disqus.html" . }}
+    </section>
 </main>
 
 {{ partial "footer.html" . }}
