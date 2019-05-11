@@ -1,13 +1,15 @@
 {{ partial "header.html" . }}
 
-<span class="b">/ </span>
-<a href="{{ .Site.BaseURL  }}" class="b bw1 bb pb1 no-underline black">{{ .Site.Title  }}</a>
-<span class="b"> / </span>
-<a href="/tags" class="b bw1 bb pb1 no-underline black">tags</a>
-<span class="b"> / </span>
-<span class="b pb1 no-underline black">{{ .Title | lower }}</span>
+<header>
+  <span class="b">/ </span>
+  <a href="{{ .Site.BaseURL  }}" class="b bw1 bb pb1 no-underline black">{{ .Site.Title  }}</a>
+  <span class="b"> / </span>
+  <a href="/tags" class="b bw1 bb pb1 no-underline black">tags</a>
+  <span class="b"> / </span>
+  <span class="b pb1 no-underline black">{{ .Title | lower }}</span>
+</header>
 
-<section id="main" class="mt5">
+<main class="mt5">
   <div>
     <ul id="list" class="pl0">
       {{ range .Data.Pages.ByDate.Reverse }}
@@ -18,6 +20,6 @@
       {{ end }}
     </ul>
   </div>
-</section>
+</main>
 
 {{ partial "footer.html" . }}

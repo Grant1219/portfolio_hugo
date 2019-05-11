@@ -8,7 +8,7 @@ Who am I? Nobody really.
 {{< figure src="/images/snes.png" alt="SNES cartoon" >}}
 
 Like many others, I was fascinated by video games at a young age.
-It was amazing that a box plugged into the TV could create such amazing experiences almost in their own world.
+It was hard to imagine how a box plugged into the TV could create such amazing experiences almost living within their own world.
 This interest led me down many paths, from learning QBASIC, to moving onto languages like C and C++ which were the defacto standard for video games at the time.
 I struggled with bugs, poor design patterns, and other pitfalls of self-taught programmers, but I learned a ton and I would do it all over again if given the chance.
 

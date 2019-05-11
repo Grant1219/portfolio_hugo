@@ -1,11 +1,13 @@
 {{ partial "header.html" . }}
 
-<span class="b">/ </span>
-<a href="{{ .Site.BaseURL  }}" class="b bw1 bb pb1 no-underline black">{{ .Site.Title }}</a>
-<span class="b"> / </span>
-<span class="b pb1 no-underline black">{{ lower .Title }}</span>
+<header>
+  <span class="f3 b">/ </span>
+  <a href="{{ .Site.BaseURL  }}" class="f3 b bw1 bb pb1 no-underline black">{{ .Site.Title }}</a>
+  <span class="f3 b"> / </span>
+  <span class="f3 b pb1 no-underline black">{{ lower .Title }}</span>
+</header>
 
-<section id="main" class="mt5">
+<main class="mt5">
   <div>
     <ul id="list" class="pl0">
       {{ range .Pages }}
@@ -18,6 +20,6 @@
       {{ end }}
     </ul>
   </div>
-</section>
+</main>
 
 {{ partial "footer.html" . }}

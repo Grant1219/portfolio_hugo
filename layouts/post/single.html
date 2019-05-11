@@ -1,11 +1,13 @@
 {{ partial "header.html" . }}
 
-<span class="b">/ </span>
-<a href="{{ .Site.BaseURL  }}" class="b bb bw1 pb1 no-underline black">{{ .Site.Title }}</a>
-<span class="b"> / </span>
-<a href="/post" class="b bb bw1 pb1 no-underline black">posts</a>
+<header>
+  <span class="f3 b">/ </span>
+  <a href="{{ .Site.BaseURL  }}" class="f3 b bb bw1 pb1 no-underline black">{{ .Site.Title }}</a>
+  <span class="f3 b"> / </span>
+  <a href="/post" class="f3 b bb bw1 pb1 no-underline black">posts</a>
+</header>
 
-<section id="main" class="mt5">
+<main class="mt5">
   <h1 itemprop="name" id="title">{{ .Title }}</h1>
   <span class="f6 gray">{{ .Date.Format "January 2, 2006" }}</span>
 
@@ -44,6 +46,6 @@
       </section>
     {{ end }}
 
-</section>
+</main>
 
 {{ partial "footer.html" . }}
