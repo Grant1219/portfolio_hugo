@@ -7,7 +7,14 @@ Location: Seattle, WA
 Professional Experience
 -----------------------
 
-Moz (2018 - Present)
+Oracle (2019 - Present)
+
+Senior Member of Technical Staff
+
+    - Work on core services for OCI, including timelines, documentation, and automation of scaling out services in new regions
+    - Develop and maintain systems used across OCI for patching and compliance
+
+Moz (2018 - 2019)
 
 DevOps Engineer
 
