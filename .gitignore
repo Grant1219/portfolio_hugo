@@ -1,5 +1,5 @@
 # Hugo default output directory
-/public
+site/public
 
 # vim swap files
 *.swp

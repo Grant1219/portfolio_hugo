@@ -4,7 +4,7 @@ description = "My thoughts from using Terraform over the past year or so"
 tags = ["development", "terraform"]
 categories = ["Development"]
 # series = []
-date = 2021-04-09T21:21:56-07:00
+date = 2021-04-09T21:11:56-07:00
 +++
 
 My dealings with Terraform in the past were mainly for my own curiousity, and to understand what all the "infrastructure as code" buzz was about.
@@ -24,7 +24,7 @@ resource "telemetry_alarm" "test_alarm" {
 }
 ```
 
-Or the shorthand conditional assignment you'll find in many C-like languages:
+And the shorthand conditional assignment you'll find in many C-like languages:
 ```
 locals {
   instance_count = var.is_test_env ? 1 : 3
@@ -38,7 +38,7 @@ What can be done about it?
 ### Handle all the special cases first, and give your modules a uniform data set
 
 One solution is to create a module that takes all the input about the environments, filter, sort, rearrange, and output it in a consistent format that can then be iterated over
-and passed to your business logic modules later on. Below is a short concrete example of what I mean.
+and passed to your business logic modules later on. Below is a short example of what I mean.
 
 The data input to start with, this is usually generic enough that it can be shared between all teams in an organization and easily maintained/updated.
 ```
