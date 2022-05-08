@@ -1,10 +1,10 @@
 +++
 title = "Influence Maps: Part 1"
-description = ""
+description = "The basics of influence maps for game development, and how to make them"
 tags = ["development", "gamedev"]
 categories = ["Development", "GameDev"]
-date = 2022-05-07T15:21:45-07:00
-draft = true
+date = 2022-05-07T18:52:30-07:00
+draft = false
 +++
 
 I have been interested in playing with influence maps for some game development demos for a while now, and have finally started really digging into them.
@@ -33,8 +33,8 @@ With 3D games or games like dungeon crawlers with many maze-like rooms, a graph 
 
 ## Influence source and propagation
 
-The source of an influence will usually define how strong the influence is at that point, and several other properties of how it behaves including decay and momentum.
-There are a lot of different ways to calculate how influences propagate or spread through a map. The one I am going to start with is similar to how the blurring function works in an image editor like Photoshop.
+The source of an influence will typically define how strong the influence is at that point, and several other properties of how it behaves including decay and momentum.
+There are a lot of different ways to calculate how influences propagate or spread through a map. The one I am going to use is similar to how the blurring function works in an image editor like Photoshop.
 I will be using a 2D grid style influence map, and only propagating influence vertically and horizontally for simplicity (distance of 1 tile). Below is the rough psuedocode of how it works.
 
 ```
@@ -61,11 +61,13 @@ The `get_neighbors_influence` method will get a list of influence strengths from
 Once a maximum influence value is found, the value is "decayed" by some rate, in this case it is decaying exponentially, but you can choose any number of formulas depending on how it should behave.
 Finally the decayed value is taken and linear interpolation is used to change the current grid tile influence at the rate of momentum (a value between 0 and 1).
 
+Using a buffer to store the previous values and applying the new values to the map during propagation is done so that new influence values that were just calculated in the row above do not affect how the next row of influence values are calculated.
+
 #### Decay
 
 This is the rate at which the influence weakens (eventually to zero). Like I mentioned above, the decay function can vary depending on the behavior. Exponential decay is most common from what I've seen, but linear or even cubic decay functions could be used too.
 
-{{< figure src="/images/decay_graphs/combined.png" alt="linear, exponential, and cubic decay graphs" >}}
+{{< figure src="/images/influence_maps_part_1/decay_graphs/combined.png" alt="Linear, exponential, and cubic decay graphs" >}}
 
 #### Momentum
 
@@ -87,14 +89,22 @@ For a real-time strategy game or city simulator the update frequency may need to
 
 ## Putting it all together
 
-For me it was difficult to understand exactly how the different parameters of an influence map can affect the result without some visuals. Here are some examples of how different parameters change the behavior of the influence.
+For me it was difficult to understand exactly how the different parameters of an influence map can affect the result without some visuals. Here are some graphical examples of how different parameters change the behavior of the influence.
+To keep things readable, I only rendered influence values 1.0 or greater.
 
-TODO
+Comparing a higher decay of 0.8 (left) to a lower decay of 0.26 (right), with the same starting strength of 5.0 and momentum of 0.3
+{{< figure src="/images/influence_maps_part_1/influence_examples/large_and_small_decay.png" alt="Comparing a decay of 0.26 to a decay of 0.8, with the same starting strength of 5.0 and momentum of 0.3" >}}
+
+Low momentum set to 0.2 with a strength of 5.0, decay of 0.5, and update frequency of 100 milliseconds.
+{{< figure src="/images/influence_maps_part_1/influence_examples/low_momentum.gif" alt="Low momentum set to 0.2 with a strength of 5.0 and decay of 0.5" >}}
+
+High momentum set to 0.8 with a strength of 5.0, decay of 0.5, and update frequency of 100 milliseconds.
+{{< figure src="/images/influence_maps_part_1/influence_examples/high_momentum.gif" alt="High momentum set to 0.8 with a strength of 5.0 and decay of 0.5" >}}
 
 ## Example code
 
-Below is some very basic C++ code that deals with all the parameters we discussed above and propagates a positive influence across a 2D grid.
-To use this class just initialize it with some values, and call `propagate_influence()` at any update frequency.
+Below is some very basic C++ code that deals with all the parameters we discussed above and propagates a positive influence across a 2D grid. This is the same propagation logic I used to create the visual examples above.
+To use this class just initialize it with some values, set influence sources with `add_influence()`, and call `propagate_influence()` at any update frequency.
 
 `influence_map.hpp`
 ```c++
