@@ -38,7 +38,7 @@ disqusShortname = "tuxinator"
     anonymizeIP = true
     respectDoNotTrack = true
     useSessionStorage = true
-  [privacy.twitter]
+  [privacy.x]
     enableDNT = true
   [privacy.youtube]
     privacyEnhanced = true
