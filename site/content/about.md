@@ -17,8 +17,8 @@ For better or for worse, I eventually shifted focus towards web technology, Linu
 Watching the change from on-premise servers to fully hosted infrastructure with multiple levels of automation and "infrastructure as code" has been interesting,
 but my true passion still lies with video games, and I continue to enjoy working on games and game technology in my spare time.
 
-Outside of computers and technology I have other hobbies, but this website is mainly focused on technology and some of my thoughts and discoveries about it.
-Anyway, thanks for visiting my small bite of the internet. :)
+Outside of computers and technology, I'm a big fan of old Japanese cars, enjoy drumming and making music, and am generally a curious person. I'll never turn down a chance to travel and have new experiences!
+Thanks for visiting my small bite of the internet. :)
 
 If you want to connect with me further, just look me up on these other platforms:
 

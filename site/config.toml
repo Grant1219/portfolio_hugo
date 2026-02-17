@@ -29,6 +29,10 @@ disqusShortname = "tuxinator"
   name = "about"
   url = "about/"
 
+[[params.menu]]
+  name = "car stuff"
+  url = "cars.tuxinator.net"
+
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
